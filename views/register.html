@@ -16,14 +16,14 @@
             <img width="150" src="/images/logo-mercado-liebre.svg" alt="imagen mercado libre">
         </div>
         <div class="home-header-buscador">
-            <form action="">
+            <form action="" method="post">
                 <input type="text">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </input>
             </form>
         </div>
         </div>
-        <p class="p-header-home"><i class="fa-solid fa-hand-holding-dollar"></i>
+        <p class="p-header-home" class="p-header-home"><i class="fa-solid fa-hand-holding-dollar"></i>
             Comprá en cuotas y sin tarjeta de crédito</p> </div>
         <nav>
             <ul class="home-header-nav-izq">
@@ -44,57 +44,64 @@
                 </button>
             </div>
     </header>
-    <main>
-      <h1>Crear cuenta</h1>
-      <form action="/register" method="post">
-        <div>
+    <main class="register-main">
+      <h1 class="register-main-h1">Crear cuenta</h1>
+      <form class="register-main-form" action="/register" method="post">
+        <div class="register-main-div">
             <input type="text" name="nombre" placeholder="Nombre y apellido" required>
         </div>
-        <div>
+        <div class="register-main-div">
             <input type="text" name="usuario" placeholder="Nombre de usuari@" required>
         </div>
-        <div>
-            <input type="date" name="fecha" placeholder="Fecha de nacimiento" required>
+        <p class="register-main-p">Fecha de nacimiento</p>
+        <div class="register-main-div">
+            <input type="date" name="fecha" value="2022-07-20" required>
         </div>
-        <div>
+        <div class="register-main-div">
             <input type="text" name="domicilio" placeholder="Domicilio" required>
         </div>
-        <p>Perfil de usuario</p>
-        <div>
-            <label>Comprar</label>
-            <input type="radio" name="perfilUsuario" value="Comprar">
+        <p class="register-main-p">Perfil de usuario</p>
+        <div class="register-main-div-perfilUsuario">
+            <label for="comprar">Comprar</label>
+            <input type="radio" name="perfilUsuario" value="Comprar" id="comprar" required>
+            <label for="vender">Vender</label>
+            <input type="radio" name="perfilUsuario" value="Vender" id="vender" required>
         </div>
-        <div>
-            <label>Vender</label>
-            <input type="radio" name="perfilUsuario" value="Vender">
+        <p class="register-main-p">Categorías de interés</p>
+        <div class="register-main-div-catInteres">
+          <div class="register-main-div-hijo_catInteres"> 
+            <input type="checkbox" name="interes" value="Electro" id="electro">
+            <label for="electro">Electro</label>
+          </div>
+          <div class="register-main-div-hijo_catInteres">         
+            <input type="checkbox" name="interes" value="Moda" id="moda">
+            <label for="moda">Moda</label>
+          </div>
+          <div class="register-main-div-hijo_catInteres">         
+            <input type="checkbox" name="interes" value="Hogar" id="hogar">
+            <label for="hogar">Hogar</label>
+          </div>
+          <div class="register-main-div-hijo_catInteres">           
+            <input type="checkbox" name="interes" value="Juguetería" id="jugueteria">
+            <label for="jugueteria">Juguetería</label>
+          </div>
+          <div class="register-main-div-hijo_catInteres">  
+            <input type="checkbox" name="interes" value="Vida sana" id="vidaSana">
+            <label for="vidaSana">Vida sana</label>
+          </div>
         </div>
-        <p>Categorías de interés</p>
-        <div>
-            <label>Electro</label>
-            <input type="checkbox" name="interes" value="Electro">
-            <label>Moda</label>
-            <input type="checkbox" name="interes" value="Moda">
-            <label>Hogar</label>
-            <input type="checkbox" name="interes" value="Hogar">
-            <label>Juguetería</label>
-            <input type="checkbox" name="interes" value="Juguetería">
-            <label>Vida sana</label>
-            <input type="checkbox" name="interes" value="Vida sana">
+        <div class="register-main-div-fotoUsuario">
+            <label for="foto">Elegir foto de usuario</label>
+            <input type="file" name="avatar" accept="jpg" id="foto">
         </div>
-        <p>Foto de usuario:</p>
-        <div>
-            <input type="file" name="avatar" accept="jpg">
-        </div>
-        <div>
+        <div class="register-main-div">
             <input type="password" name="password" placeholder="Password" required>
         </div>
-        <div>
+        <div class="register-main-div">
             <input type="password" name="password2" placeholder="Confirmar password" required>
         </div>
-        <div>
+        <div class="register-main-div-enviar_borrar">
             <button type="submit">Enviar</button>
-        </div>
-        <div>
             <button type="reset">Borrar</button>
         </div>
       </form>

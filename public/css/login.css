@@ -9,7 +9,8 @@
     text-decoration: underline;}
 .login-main-form{
     display: flex;
-    justify-content: center;
+    justify-content: center;}
+.login-main-form-div{
     width: 80%;}
 .login-main-usuario{
     width: 100%;

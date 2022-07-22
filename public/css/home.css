@@ -98,7 +98,8 @@ p.descuento{
     color: #ebebeb;}
 .home-footer-h4{
     text-align: center;
-    color: #666;}
+    color: #666;
+    display: block;}
 .home-footer-icono{
     color: #1259c3;
     font-size: 2em;
